@@ -3,7 +3,7 @@
 ------------------------------------------------------------------
 
 function addGlobalPeds(name, size, icon, label, onselect, canInteract)
-    if Config.Misc.AccessMethod == "ox-target" then
+    if Config.Misc.AccessMethod == "ox_target" then
         exports.ox_target:addGlobalPed({{
             name = name,
             icon = icon,
@@ -36,7 +36,7 @@ function addGlobalPeds(name, size, icon, label, onselect, canInteract)
 end
 
 function removeTargetEntity(data)
-    if Config.Misc.AccessMethod == "ox-target" then
+    if Config.Misc.AccessMethod == "ox_target" then
         exports.ox_target:removeEntity(data.id)
     elseif Config.Misc.AccessMethod == "qb-target" then
         exports['qb-target']:RemoveTargetEntity(data.id, data.name)
@@ -44,7 +44,7 @@ function removeTargetEntity(data)
 end
 
 function addTargetTypedEntity(name, size, icon, label, onselect, entity)
-    if Config.Misc.AccessMethod == "ox-target" then
+    if Config.Misc.AccessMethod == "ox_target" then
         local networkId = NetworkGetNetworkIdFromEntity(entity)
         exports.ox_target:addEntity(networkId, {
             icon = icon,
